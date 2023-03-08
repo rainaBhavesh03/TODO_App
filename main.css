@@ -1,0 +1,231 @@
+:root {
+    --radius: 15px;
+    --app-width: 600px;
+    --box-border: rgba(255, 255, 255, 0.8);
+    --accent: hsl(153, 71%, 59%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+}
+
+.visuallyHidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* BACKGROUND */
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.box div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 6px solid var(--box-border);
+}
+
+.box div:nth-child(1) {
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7) {
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(8) {
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(9) {
+    top: 90%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10) {
+    top: 20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    
+    100%{
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* TODO CONTENT */
+
+.todo__content {
+    color: #ffffffb0;
+    background-color: #ffffff21;
+    width: var(--app-width);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: 0 15px 40px -20px black;
+}
+
+.todo__title {
+    text-transform: uppercase;
+}
+
+.todo__content h1 {
+    margin-block-start: 0px;
+    margin-block-end: 40px;
+    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 0.7rem + 7.68vw, 5.5rem);
+    letter-spacing: -0.028em;
+    line-height: 1.1;
+}
+
+.todo__input {
+    width: 100%;
+    margin-block-end: 2rem;
+    border: none;
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    background-color: #f4f4f425;
+    color: white;
+    caret-color: var(--accent);
+}
+
+.todo__input:focus-visible {
+    outline: 2px dashed var(--accent);
+    outline-offset: 2px;
+}
+
+.todo__input::placeholder {
+    color: #ffffff70;
+}
+
+.todo__list, .todo__incomplete, .todo__completed {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.todo__item {
+    background-color: #f4f4f4bd;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.todo__item span {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.todo__item input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    accent-color: lime;
+}
+
+.todo__item a {
+    color: #555555;
+}
+
+.todo__item a img {
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+}
+
+.todo__completed .todo__item {
+    background-color: #74c674;
+    text-decoration: line-through;
+}
+
+.completed__title {
+    font-size: 20px;
+    margin-block-start: 30px;
+    margin-block-end: 10px;
+}

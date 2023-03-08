@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TODO App</title>
+
+        <link rel="stylesheet" href="main.css">
+
+        <link rel="shortcut icon" type="image/svg" href="Assets/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1 class="visuallyHidden">Animated Background</h1>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        
+<!-- TODO: add a 3d box effect with js for mousemove -->
+
+        <div class="todo__content">
+            <h1 class="todo__title">TODO List</h1>
+            <input type="text" class="todo__input" placeholder="Write something todo...">
+            <div class="todo__list">
+                <div class="todo__incomplete">
+                    <div class="todo__item">
+                        <span>
+                            <input type="checkbox" class="todo__task">Drink Water
+                        </span>
+                        <a href="#">
+                            <img class="close__icon" src="Assets/cross.svg" alt="close icon" width="17px" height="17px">
+                        </a>
+                    </div>
+                    <div class="todo__item">
+                        <span>
+                            <input type="checkbox" class="todo__task">Drink Water
+                        </span>
+                        <a href="#">
+                            <img class="close__icon" src="Assets/cross.svg" alt="close icon" width="17px" height="17px">
+                        </a>
+                    </div>
+                </div>
+                <div class="todo__completed">
+                    <div class="completed__title">
+                        Completed (1/3)
+                    </div>
+                    <div class="todo__item">
+                        <span>
+                            <input type="checkbox" class="todo__task">Drink Water
+                        </span>
+                        <a href="#">
+                            <img class="close__icon" src="Assets/cross.svg" alt="close icon" width="17px" height="17px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="todo.js"></script>
+    </body>
+</html>
